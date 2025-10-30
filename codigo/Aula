@@ -1,0 +1,55 @@
+programa {
+  funcao inicio() {
+    // Declarando variáveis
+    cadeia nome[100]
+    inteiro idade[100]
+    real notas[100]
+    inteiro qtd, opcao, contador 
+    logico aprovado, destaque, alerta 
+
+    qtd<-0
+    
+    repita
+    //Exibição do meu principal
+    escreva("========================")
+    escreva("SISTEMA DE ALUNOS - MENU")
+    escreva("========================")
+    escreva("1- Cadastro de alunos")
+    escreva("2- Listar Alunos com status de aprovado")
+    escreva("3- Mostrar alunos em destaque (idade>= 18 E nota >=8)")
+    escreva("4- Exibir alerta não aprovados")
+    escreva("5- Mostrar alunos não aprovados")
+    escreva("0- Sair")
+    escreva("Opção desejada")
+    leia(opcao)
+    
+    escolha (opcao){
+    caso 1:
+    qtd<- qtd+1
+    escreva("Nome do Aluno")
+    leia (nome[qtd])
+    escreva("Idade")
+    leia(idade[qtd])
+    escreva("Nota:")
+    leia (nota[qtd])
+    escreva ("Aluno cadastrado com sucesso!")
+    pare
+   caso 2:
+    se (qtd> 0) 
+      para(contador<-1; contador<= qtd; contador++)
+        aprovador<- notas [contador]>=6
+        se (aprovado)
+          escreva(nome[contador],notas[contador],"Aprovados")
+    pare
+
+    caso 3:
+    escreva("Alunos em Destaques")
+    se (qtd> 0)
+      para(contador<-1; contador<= qtd; contador++)
+        destaque <- (idade[contador]>=18)e (notas[contador]>=8)
+        se (destaque)
+          escreva("")
+}    
+
+  }
+}
